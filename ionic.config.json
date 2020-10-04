@@ -1,0 +1,7 @@
+{
+  "name": "Probe",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

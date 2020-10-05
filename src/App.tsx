@@ -7,13 +7,23 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import './theme/app.css';
 
 import Header from './Header';
+import GameCard from './GameCard'
 
 
 
 const App: React.FC = () => (
   <div className="app">
     <Header />
-    <Router></Router>
+    <Router>
+      <Switch>
+        <Route path="/game">
+          <GameCard />
+        </Route>
+        <Route path="/">
+          
+        </Route>
+      </Switch>
+    </Router>
   </div>
 );
 

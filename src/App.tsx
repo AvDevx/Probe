@@ -7,20 +7,21 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import './theme/app.css';
 
 import Header from './Header';
-import GameCard from './GameCard'
+import GameCard from './GameCard';
+import LandingScreen from './LandingScreen';
 
 
 
 const App: React.FC = () => (
   <div className="app">
-    <Header />
     <Router>
       <Switch>
         <Route path="/game">
+          <Header />
           <GameCard />
         </Route>
         <Route path="/">
-          
+          <LandingScreen />
         </Route>
       </Switch>
     </Router>

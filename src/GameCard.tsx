@@ -2,6 +2,10 @@ import React, { useState } from 'react'
 
 import TinderCard from 'react-tinder-card';
 
+import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
+
+import IconButton from "@material-ui/core/IconButton";
+
 import './GameCard.css'
 
 
@@ -35,9 +39,25 @@ const GameCard = () => {
                 style={{ backgroundImage: `url(${el.url})` }}
                 className="card"
               >
+                <div className="card__info hide">
+                  <h5>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book.
+                  </h5>
+                </div>
                 <div className="card__title">
-                  <h3> {el.name} </h3>
-                  <h5> {el.location} </h5>
+                  <div>
+                    <h3> {el.name} </h3>
+                    <h5> {el.location} </h5>
+                  </div>
+                  <div>
+                    <IconButton>
+                      <InfoOutlinedIcon className="title__icon" />
+                    </IconButton>
+                  </div>
                 </div>
               </div>
             </TinderCard>
@@ -45,6 +65,11 @@ const GameCard = () => {
         ))}
       </div>
     );
+
+
+
+
 }
+
 
 export default GameCard

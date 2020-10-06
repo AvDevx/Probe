@@ -77,9 +77,11 @@ h1{
 button{
 	outline: none;
 	border: none;
+	border-radius: 50%;
+	background-color: transparent;
 }
 
-.landing__startButton, .button{
+.landing__startButton{
 	width: 100%;
 	color: white;
 	font-size: 14px;
@@ -91,3 +93,4 @@ button{
 	border-radius: 15px;
     background-color: rgba(0, 0, 0, 0.47);
 }
+

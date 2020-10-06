@@ -1,10 +1,11 @@
 import React from 'react'
 
-import IconButton from "@material-ui/core/IconButton";
+ import { Link } from "react-router-dom";
+
+
 
 
 import './LandingScreen.css'
-import { CenterFocusStrong } from '@material-ui/icons';
 
 
 const LandingScreen = () => {
@@ -13,9 +14,7 @@ const LandingScreen = () => {
     return (
       <div className="landing__container">
         <div>
-          <div className="h3">
-            PROBE
-          </div>
+          <div className="h3">PROBE</div>
         </div>
 
         <div>
@@ -25,9 +24,10 @@ const LandingScreen = () => {
             items={["Taj Mahal?", "Statue of Liberty?", "Eifiel Tower?"]}
           />
         </div>
-        <IconButton className="button">
-          <button className="landing__startButton">START GAME</button>
-        </IconButton>
+
+        <Link to={{ pathname: "/game" }}>
+            <button className="landing__startButton">START GAME</button>
+        </Link>
       </div>
     );
 
